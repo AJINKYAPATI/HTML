@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anl{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            position: relative;
+            animation-name: move;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            form{
+                background-color: hotpink;
+                left: 0px;
+                transform: rotate(45deg);
+            }
+            to{
+                left: 500px;
+                background-color: red;
+                transform: rotate(85deg);
+            }
+        }
+        .ring{
+            height: 100px;
+            width: 100px;
+            border: 10px solid;
+            border-radius: 50%;
+            border-bottom: none;
+            animation-name: ring;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ring {
+            form{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="anl"></div>
+    <div class="ring"></div>
+    
+</body>
+</html>
