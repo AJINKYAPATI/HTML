@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Moving 😁 Animation</title>
+  <style>
+    /* Reset and background */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* Wrapper moves horizontally */
+    .emoji-wrapper {
+      position: relative;
+      animation: moveAcross 4s linear infinite alternate;
+    }
+
+    /* Emoji styling + bounce effect */
+    .emoji {
+      font-size: 6rem;
+      display: inline-block;
+      text-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      animation: bounce 0.6s ease-in-out infinite alternate;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    /* Small zoom when hovered */
+    .emoji:hover {
+      transform: scale(1.1);
+    }
+
+    /* Horizontal movement */
+    @keyframes moveAcross {
+      0% {
+        transform: translateX(-40vw);
+      }
+      100% {
+        transform: translateX(40vw);
+      }
+    }
+
+    /* Up–down bounce */
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-18px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="emoji-wrapper">
+    <span class="emoji">😁</span>
+  </div>
+
+</body>
+</html>
